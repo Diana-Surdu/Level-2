@@ -1,0 +1,153 @@
+
+
+:root {
+  --ambient-color: rgb(46, 11, 11);
+  --width: 700px;
+  --height: 600px;
+}
+
+/*resetting styles*/
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: var(--ambient-color);
+}
+
+#scene {
+  border: 1px solid white;
+  width: var(--width);
+  height: var(--height);
+
+  background-image: url(images/johannes-plenio-RwHv7LgeC7s-unsplash.jpg);
+  background-size: cover;
+
+  /*background-repeat: no-repeat;*/
+
+  position: absolute;
+  overflow: hidden;
+
+  perspective: 500px;
+}
+
+#scene .leave {
+  width: calc( var(--width) / 10);
+  height: calc( var(--width) / 10);
+  /*border: 1px solid white;*/
+  /*background-color: #fff;*/
+
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  /*transform: rotateX(.05turn);*/
+}
+
+#scene .leave1 {
+  background-image: url(images/leaves/leave-1.png);
+
+  /*apply the animation*/
+  animation: fall-1 10s ease-in;
+  animation-fill-mode: forwards;
+}
+
+#scene .leave2 {
+  background-image: url(images/leaves/leave003.png);
+
+  right: 50%;
+  top: 50px;
+
+  /*apply the animation*/
+  animation: fall-2 9s ease-in;
+  animation-fill-mode: forwards; 
+}
+
+#scene .leave3 {
+  background-image: url(images/leaves/leave004.png);
+
+  right: 70%;
+  top: 100px;
+
+  animation: fall-3 12s ease-in;
+  animation-fill-mode: forwards; 
+}
+
+
+
+#scene .leave4 {
+  background-image: url(images/leaves/leave005.png);
+
+  right: 20%;
+  top: 10px;
+
+  animation: fall-4 12s ease-in;
+  animation-fill-mode: forwards;
+}
+
+#scene .leave5 {
+  background-image: url(images/leaves/leave001.png);
+
+  right: 5%;
+  top: 0;
+
+  animation: fall-5 12s ease-in;
+  animation-fill-mode: forwards;
+}
+
+
+/*CSS Animation*/
+@keyframes fall-1 {
+  from {
+    top: 0%;
+    transform: rotateZ(0) rotateX(0) scale(0.2);
+  }
+  to {
+    top: 100%;
+    transform: rotateZ(2turn) rotateX(5turn) scale(1.0);
+  }
+}
+
+@keyframes fall-2 {
+  from {
+    top: 20%;
+    transform: rotateZ(0) rotateX(0) scale(0.2);
+  }
+  to {
+    top: 100%;
+    transform: rotateZ(2turn) rotateX(3turn) scale(1.0);
+  }
+}
+
+@keyframes fall-3 {
+  from {
+    top: 20%;
+    transform: rotateZ(0) rotateX(0) scale(0.2);
+  }
+  to {
+    top: 100%;
+    transform: rotateZ(4turn) rotateX(1turn) scale(.5);
+  }
+}
+
+@keyframes fall-4 {
+  from {
+    top: 10%;
+    transform: rotateZ(0) rotateX(0) scale(0.2);
+  }
+  to {
+    top: 100%;
+    transform: rotateZ(2turn) rotateX(4turn) scale(.7);
+  }
+}
+
+@keyframes fall-5 {
+  from {
+    top: 0%;
+    transform: rotateZ(0) rotateX(0) scale(0.3);
+  }
+  to {
+    top: 100%;
+    transform: rotateZ(5turn) rotateX(5turn) scale(.5);
+  }
+}
